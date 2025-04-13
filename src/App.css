@@ -57,3 +57,21 @@ button:hover {
 .todo-item button:hover {
   background: #c82333;
 }
+
+/* src/styles.css */
+:root {
+  --bg-light: #ffffff;
+  --text-light: #333333;
+  --bg-dark: #1a1a1a;
+  --text-dark: #f5f5f5;
+}
+
+.dark-mode {
+  background-color: var(--bg-dark);
+  color: var(--text-dark);
+}
+
+/* Aplica los estilos a componentes específicos si es necesario */
+.dark-mode .todo-item {
+  background-color: #2d2d2d;
+}

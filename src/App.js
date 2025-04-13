@@ -1,8 +1,12 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import axios from 'axios';
 import './App.css';
+import { ThemeContext } from './context/ThemeContext';
+import { ThemeToggle } from './components/ThemeToggle';
+
 
 function App() {
+  const { isDarkMode } = useContext(ThemeContext);
   const [todos, setTodos] = useState([]);
   const [text, setText] = useState('');
 
@@ -26,7 +30,7 @@ function App() {
 
   const toggleComplete = async (id) => {
     const todo = todos.find(todo => todo._id === id);
-    const response = await axios.patch(`http://localhost:5000/api/todos/${id}`, {
+    const response = await axios.put(`http://localhost:5000/api/todos/${id}`, {
       completed: !todo.completed
     });
     
@@ -39,8 +43,10 @@ function App() {
   };
 
   return (
+    <div className={`app ${isDarkMode ? 'dark-mode' : ''}`}>
     <div className="App">
-      <h1>Todo App</h1>
+      <ThemeToggle />
+      <h1>📄 Reminder app</h1>
       <form onSubmit={addTodo}>
         <input
           type="text"
@@ -65,6 +71,7 @@ function App() {
         ))}
       </div>
     </div>
+  </div>
   );
 }
 

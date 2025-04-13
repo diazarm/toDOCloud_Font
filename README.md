@@ -1,70 +1,43 @@
-# Getting Started with Create React App
+# TodoApp Frontend
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Aplicación frontend desarrollada en React para gestionar tareas (ToDo), integrada con un backend en Node.js. Este proyecto forma parte de un ejercicio de aprendizaje sobre Docker y Google Cloud Platform (GCP).
 
-## Available Scripts
+[**Demo en Vercel**](https://todoont.vercel.app/) | [**Repositorio del Backend**](https://github.com/diazarm/toDOCloud_Back)
 
-In the project directory, you can run:
+## 📋 Descripción
 
-### `npm start`
+Aplicación simple para administrar tareas con las siguientes funcionalidades:
+- Crear nuevas tareas.
+- Marcar tareas como completadas.
+- Eliminar tareas completadas.
+- Sincronización en tiempo real con un backend personalizado.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+**Objetivo principal**: Aprender a implementar y desplegar servicios usando Docker y GCP en el backend.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 🚀 Funcionalidades
 
-### `npm test`
+- **Agregar tareas**: Ingresa nuevas tareas mediante un formulario.
+- **Marcar como completadas**: Toggle para cambiar el estado de las tareas.
+- **Eliminar tareas completadas**: Botón para eliminar todas las tareas finalizadas.
+- **Integración con backend**: Persistencia de datos en una base de datos a través de una API.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 🛠 Tecnologías
 
-### `npm run build`
+- **Frontend**: React.js
+- **Backend**: Node.js (repositorio separado)
+- **Despliegue**: 
+  - Frontend: Vercel
+  - Backend: Docker + GCP (en proceso de aprendizaje)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 🤝 Contribuir
+¡Las contribuciones son bienvenidas! Si encuentras errores o mejoras:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Haz un fork del proyecto.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Crea una rama con tu feature (git checkout -b feature/nueva-funcionalidad).
 
-### `npm run eject`
+Haz commit de los cambios (git commit -m 'Agrego nueva funcionalidad').
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Haz push a la rama (git push origin feature/nueva-funcionalidad).
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Abre un Pull Request.
