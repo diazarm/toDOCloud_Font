@@ -26,7 +26,7 @@ function App() {
 
   const toggleComplete = async (id) => {
     const todo = todos.find(todo => todo._id === id);
-    const response = await axios.patch(`http://localhost:5000/api/todos/${id}`, {
+    const response = await axios.put(`http://localhost:5000/api/todos/${id}`, {
       completed: !todo.completed
     });
     
