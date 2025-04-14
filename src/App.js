@@ -4,7 +4,9 @@ import './App.css';
 import { ThemeContext } from './context/ThemeContext';
 import { ThemeToggle } from './components/ThemeToggle';
 
-const url="https://todo-back-backend-921136495216.southamerica-west1.run.app/"
+
+const url="https://todo-back-backend-921136495216.southamerica-west1.run.app"
+
 
 function App() {
   const { isDarkMode } = useContext(ThemeContext);
@@ -31,7 +33,9 @@ function App() {
 
   const toggleComplete = async (id) => {
     const todo = todos.find(todo => todo._id === id);
-    const response = await axios.put(`${url}/api/todos/api/todos/${id}`, {
+
+    const response = await axios.put(`${url}/api/todos/${id}`, {
+
       completed: !todo.completed
     });
     
@@ -39,7 +43,9 @@ function App() {
   };
 
   const deleteTodo = async (id) => {
-    await axios.delete(`${url}/api/todos/api/todos/${id}`);
+
+    await axios.delete(`${url}/api/todos/${id}`);
+
     setTodos(todos.filter(todo => todo._id !== id));
   };
 
