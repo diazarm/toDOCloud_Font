@@ -4,6 +4,7 @@ import './App.css';
 import { ThemeContext } from './context/ThemeContext';
 import { ThemeToggle } from './components/ThemeToggle';
 
+const url="https://todo-back-backend-921136495216.southamerica-west1.run.app"
 
 function App() {
   const { isDarkMode } = useContext(ThemeContext);
@@ -15,7 +16,7 @@ function App() {
   }, []);
 
   const fetchTodos = async () => {
-    const response = await axios.get('http://localhost:5000/api/todos');
+    const response = await axios.get(`${url}/api/todos`);
     setTodos(response.data);
   };
 
@@ -23,14 +24,14 @@ function App() {
     e.preventDefault();
     if (!text) return;
     
-    const response = await axios.post('http://localhost:5000/api/todos', { text });
+    const response = await axios.post(`${url}/api/todos`, { text });
     setTodos([response.data, ...todos]);
     setText('');
   };
 
   const toggleComplete = async (id) => {
     const todo = todos.find(todo => todo._id === id);
-    const response = await axios.put(`http://localhost:5000/api/todos/${id}`, {
+    const response = await axios.put(`${url}/api/todos/${id}`, {
       completed: !todo.completed
     });
     
@@ -38,7 +39,7 @@ function App() {
   };
 
   const deleteTodo = async (id) => {
-    await axios.delete(`http://localhost:5000/api/todos/${id}`);
+    await axios.delete(`${url}/api/todos/${id}`);
     setTodos(todos.filter(todo => todo._id !== id));
   };
 
